@@ -1,0 +1,34 @@
+﻿@using Shop.Application.Extensions
+@using Shop.Domain.Entities.Shop.Site
+@model List<Shop.Domain.Entities.Shop.Site.Comment>
+
+@if (Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="dec-review-wrap mb-50">
+            <div class="row">
+                <div class="col-xl-9 col-lg-8 col-md-7">
+                    <div class="dec-review-content">
+                        <p>@item.Content</p>
+                        <div class="review-content-bottom">
+                            <div class="review-date">
+                                <span>@item.CreateDate.ToDateTimeString()</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+else 
+{
+    <div class="text-center">
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">There is no comment!</h4>
+            <p>Unfortunately, there are no comments yet.</p>
+        </div>
+    </div>
+}

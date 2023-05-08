@@ -1,0 +1,114 @@
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.deps.json
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.dll
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.pdb
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.dll
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.dll
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.dll
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.pdb
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.pdb
+E:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.pdb
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.AssemblyReference.cache
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.GeneratedMSBuildEditorConfig.editorconfig
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfoInputs.cache
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfo.cs
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CoreCompileInputs.cache
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CopyComplete
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.dll
+E:\Shop\Shop.IoC\obj\Debug\net6.0\refint\Shop.IoC.dll
+E:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.pdb
+E:\Shop\Shop.IoC\obj\Debug\net6.0\ref\Shop.IoC.dll
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.deps.json
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.dll
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.pdb
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.dll
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.dll
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.dll
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.pdb
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.pdb
+F:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.pdb
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.AssemblyReference.cache
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.GeneratedMSBuildEditorConfig.editorconfig
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfoInputs.cache
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfo.cs
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CoreCompileInputs.cache
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CopyComplete
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.dll
+F:\Shop\Shop.IoC\obj\Debug\net6.0\refint\Shop.IoC.dll
+F:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.pdb
+F:\Shop\Shop.IoC\obj\Debug\net6.0\ref\Shop.IoC.dll
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.deps.json
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.dll
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.pdb
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.dll
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.dll
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.dll
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.pdb
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.pdb
+A:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.pdb
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.AssemblyReference.cache
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.GeneratedMSBuildEditorConfig.editorconfig
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfoInputs.cache
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfo.cs
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CoreCompileInputs.cache
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CopyComplete
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.dll
+A:\Shop\Shop.IoC\obj\Debug\net6.0\refint\Shop.IoC.dll
+A:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.pdb
+A:\Shop\Shop.IoC\obj\Debug\net6.0\ref\Shop.IoC.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.deps.json
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.pdb
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.pdb
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.pdb
+A:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.pdb
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.AssemblyReference.cache
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.GeneratedMSBuildEditorConfig.editorconfig
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfoInputs.cache
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfo.cs
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CoreCompileInputs.cache
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CopyComplete
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\refint\Shop.IoC.dll
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.pdb
+A:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\ref\Shop.IoC.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.deps.json
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.pdb
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.pdb
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.pdb
+F:\ASP.NET CORE\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.pdb
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.AssemblyReference.cache
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfoInputs.cache
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfo.cs
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CoreCompileInputs.cache
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CopyComplete
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\refint\Shop.IoC.dll
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.pdb
+F:\ASP.NET CORE\Shop\Shop.IoC\obj\Debug\net6.0\ref\Shop.IoC.dll
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.deps.json
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.dll
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.IoC.pdb
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.dll
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.dll
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.dll
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Application.pdb
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.DataLayer.pdb
+D:\Shop\Shop.IoC\bin\Debug\net6.0\Shop.Domain.pdb
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.AssemblyReference.cache
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfoInputs.cache
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.AssemblyInfo.cs
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CoreCompileInputs.cache
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.csproj.CopyComplete
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.dll
+D:\Shop\Shop.IoC\obj\Debug\net6.0\refint\Shop.IoC.dll
+D:\Shop\Shop.IoC\obj\Debug\net6.0\Shop.IoC.pdb
+D:\Shop\Shop.IoC\obj\Debug\net6.0\ref\Shop.IoC.dll

@@ -1,0 +1,12 @@
+﻿@model Shop.Domain.Entities.Admin.SiteUI.MiddleBanner
+
+@if (Model == null)
+{
+    <a asp-action="MiddleBanner" asp-controller="SiteUI" class="dropdown-item">Add MidBanner</a>
+}
+
+else
+{
+    <a asp-action="EditMiddleBanner" asp-controller="SiteUI" asp-route-bannerId="@Model.Id" class="dropdown-item">Edit MidBanner</a>
+    <a asp-action="EditImgMidBanner" asp-controller="SiteUI" asp-route-bannerId="@Model.Id" class="dropdown-item">Change Image</a>
+}

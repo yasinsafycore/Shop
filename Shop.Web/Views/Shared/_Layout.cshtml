@@ -1,0 +1,43 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!-- CSS
+    ============================================ -->
+
+    <partial name="_HeaderReferences" />
+
+    @await RenderSectionAsync("Styles", false)
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <partial name="_Header" />
+        
+        @RenderBody()
+
+        <partial name="_Footer" />
+
+    </div>
+    <!-- JS
+============================================ -->
+
+    <partial name="_FooterReferences" />
+    <partial name="_Notification" />
+    @await RenderSectionAsync("Scripts", false)
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="slider-area section-margin-3">
+    <div class="slider-active-3 owl-carousel nav-style-5">
+        @await Component.InvokeAsync("HeaderSlider")
+    </div>
+</div>
+<div class="banner-area pt-30">
+    <div class="container">
+        <div class="row">
+            @await Component.InvokeAsync("HeaderBanner")
+        </div>
+    </div>
+</div>
+<div class="product-area pt-60 pb-85">
+    <div class="container">
+        @await Component.InvokeAsync("LastProduct")
+    </div>
+</div>
+<div class="product-area pb-50">
+    <div class="container">
+        @await Component.InvokeAsync("AllProduct")
+    </div>
+</div>
+<div class="deal-area section-margin-3">
+    @await Component.InvokeAsync("MidBanner")
+</div>
+<div class="blog-area pt-90 pb-50">
+    <div class="container">
+        @await Component.InvokeAsync("LastBlogs")
+    </div>
+</div>

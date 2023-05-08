@@ -1,0 +1,199 @@
+﻿<header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                @await Component.InvokeAsync("AdminLogo")
+            </div>
+
+            <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-toggle="collapse" data-target="#topnav-menu-content">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <div class="topnav">
+                <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+                    <div class="collapse navbar-collapse" id="topnav-menu-content">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Settings <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                           Logo <div class="arrow-down"></div>
+                                        </a>
+                                        
+                                        @await Component.InvokeAsync("SiteLogo")
+
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Copy Right <div class="arrow-down"></div>
+                                        </a>
+
+                                        @await Component.InvokeAsync("CopyRight")
+
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Footer <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            <a asp-action="AddLabel" asp-controller="Setting" class="dropdown-item">Add label</a>
+                                            <a asp-action="LabelList" asp-controller="Setting" class="dropdown-item">Labels</a>
+                                            <hr />
+                                            <a asp-action="AddLink" asp-controller="Setting" class="dropdown-item">Add link</a>
+                                            <a asp-action="LinkList" asp-controller="Setting" class="dropdown-item">Links</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a asp-action="Users" asp-controller="Setting" class="dropdown-item">Users</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Site <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Contacts <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            <a asp-action="Contact" asp-controller="Site" class="dropdown-item">Last Calls</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            AboutUs <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            @await Component.InvokeAsync("AboutUs")
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Staff Team <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            <a asp-action="AddTeam" asp-controller="Site" class="dropdown-item">Add Employee</a>
+                                            <a asp-action="TeamList" asp-controller="Site" class="dropdown-item">List of Employees</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    UI <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-pages">
+
+                                    <a asp-action="HeaderSlider" asp-controller="SiteUI" class="dropdown-item">Add Slider</a>
+                                    <a asp-action="ListHeaderSlider" asp-controller="SiteUI" class="dropdown-item">List Sliders</a>
+                                    <hr />                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Header Banner <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-email">
+                                            <a asp-action="HeaderBanner" asp-controller="SiteUI" class="dropdown-item">Add Banner</a>
+                                            <a asp-action="ListHeaderBanner" asp-controller="SiteUI" class="dropdown-item">List Banners</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-task" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Middle Banner <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-task">
+
+                                            @await Component.InvokeAsync("MiddleBanner")
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-charts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Store <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Categories <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            <a asp-action="AddCategories" asp-controller="Product" class="dropdown-item">Add Category</a>
+                                            <a asp-action="ListCategories" asp-controller="Product" class="dropdown-item">List Categories</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Products <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            <a asp-action="AddProducts" asp-controller="Product" class="dropdown-item">Add Product</a>
+                                            <a asp-action="ListProducts" asp-controller="Product" class="dropdown-item">List Products</a>
+                                            <a asp-action="ListComments" asp-controller="Product" class="dropdown-item">List Comments</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Orders <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                            <a asp-action="ListPendingOrders" asp-controller="Product" class="dropdown-item">Pending Orders</a>
+                                            <a asp-action="ListPostedOrders" asp-controller="Product" class="dropdown-item">Orders Sent</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    WeBlog  <div class="arrow-down"></div>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                    <a asp-action="AddBlog" asp-controller="Blog" class="dropdown-item">Add Blog</a>
+                                    <a asp-action="ListBlogs" asp-controller="Blog" class="dropdown-item">List Blogs</a>
+                                    <a asp-action="ListComments" asp-controller="Blog" class="dropdown-item">List Comments</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="d-flex">
+
+            <div class="dropdown d-inline-block">
+
+                @await Component.InvokeAsync("AdminHeaderBar")
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <!-- item-->
+                    <a class="dropdown-item" href="/"><i class="bx bx-loader-alt font-size-16 align-middle mr-1"></i> Shop</a>
+                </div>
+
+
+            </div>
+
+            <div class="dropdown d-inline-block">
+                <button class="btn header-item noti-icon">
+                    <i class="mdi mdi-settings-outline"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

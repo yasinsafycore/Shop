@@ -1,0 +1,23 @@
+﻿@model List<Shop.Domain.Entities.Admin.SiteUI.HeaderBanner>
+
+@if (Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="banner-wrap mb-30 res-white-overly-xs">
+                <a href="@item.Link">
+                    <img width="570" height="320" src="/content/gallery/@item.Img" alt="banner">
+                </a>
+                <div class="banner-content-14">
+                    <h3><a href="@item.Link">@item.Title</a></h3>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+else
+{
+
+}

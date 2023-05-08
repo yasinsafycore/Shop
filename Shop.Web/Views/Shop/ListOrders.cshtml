@@ -1,0 +1,113 @@
+﻿@using Shop.Application.Extensions;
+@using Shop.Domain.Entities.Shop.Orders;
+@model List<Shop.Domain.Entities.Shop.Orders.Order>;
+
+@{
+    ViewData["Title"] = "List Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var g = (int)ViewBag.PageID + 1;
+    var j = (int)ViewBag.PageID - 1;
+}
+
+@if (Model.Any())
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title">Data list</h4>
+                    <br />
+
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Cart total</th>
+                                    <th>Date</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.User.GetUserName()</td>
+                                        <td>$@item.OrderSum</td>
+                                        <td>@item.CreateDate.ToDateTimeString()</td>
+
+                                        @if (!item.Posted)
+                                        {
+                                            <td class="text-center"><span class="badge badge-danger">Pending</span></td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-center"><span class="badge badge-success">Posted</span></td>
+                                        }
+
+                                        <td class="text-center">
+
+                                            <div class="dropdown custom-dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </a>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1" style="will-change: transform;">
+
+                                                    <a class="dropdown-item" asp-action="OrderDetail" asp-controller="Shop" asp-route-orderId="@item.Id">Products</a>
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br />
+
+    <div class="pagination-style text-center">
+        <ul>
+            @if (ViewBag.PageID >= ViewBag.PageCount && ViewBag.PageID != 1)
+            {
+                <li><a class="prev" asp-action="ListOrders" asp-controller="Shop" asp-route-orderId="@j"><i class="la la-angle-left"></i></a></li>
+            }
+            <li>
+                @for (int i = 1; i <= (ViewBag.PageCount + 1); i++)
+                {
+                    <a class="@(((int)ViewBag.PageID==i)?"active":"")" asp-action="ListOrders" asp-controller="Shop" asp-route-orderId="@i">@i</a>
+                }
+            </li>
+            @if (ViewBag.PageID <= ViewBag.PageCount)
+            {
+                <li><a class="next" asp-action="ListOrders" asp-controller="Shop" asp-route-orderId="@g"><i class="la la-angle-right"></i></a></li>
+            }
+
+        </ul>
+    </div>
+
+    <br />
+
+}
+
+else
+{
+
+}
+
+

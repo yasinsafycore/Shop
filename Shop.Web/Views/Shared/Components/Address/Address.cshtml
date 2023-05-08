@@ -1,0 +1,10 @@
+﻿@model Shop.Domain.Entities.Shop.Account.Address
+
+@if (Model == null)
+{
+    <li><a asp-action="Address" asp-controller="Shop"> Address </a></li>
+}
+else
+{
+    <li><a asp-action="EditAddress" asp-controller="Shop" asp-route-addressId="@Model.Id"> Address </a></li>
+}

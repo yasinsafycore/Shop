@@ -1,0 +1,15 @@
+﻿@model Shop.Domain.Entities.Admin.Setting.General.SiteLogo
+
+@if (Model == null)
+{
+    <div class="dropdown-menu" aria-labelledby="topnav-form">
+        <a asp-action="SiteLogo" asp-controller="Setting" class="dropdown-item">Add Logo</a>
+    </div>
+}
+else    
+{
+    <div class="dropdown-menu" aria-labelledby="topnav-form">
+        <a asp-action="EditSiteImg" asp-controller="Setting" asp-route-logoId="@Model.Id" class="dropdown-item">Change Logo</a>
+        <a asp-action="EditSiteDescription" asp-controller="Setting" asp-route-logoId="@Model.Id" class="dropdown-item">Site Description</a>
+    </div>
+}

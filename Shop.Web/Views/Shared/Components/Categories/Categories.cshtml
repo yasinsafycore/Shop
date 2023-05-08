@@ -1,0 +1,11 @@
+﻿@model List<Shop.Domain.Entities.Admin.Products.Categories>
+
+@if (Model.Any())
+{
+    <ul class="submenu">
+        @foreach (var item in Model)
+        {
+            <li><a asp-action="ProductsByCategory" asp-controller="Shop" asp-route-categoryId="@item.Id"> @item.Title </a></li>
+        }
+    </ul>
+}

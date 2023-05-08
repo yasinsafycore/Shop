@@ -1,0 +1,91 @@
+﻿@model Shop.Domain.Entities.Admin.Setting.Footer.Social
+
+@if (Model != null)
+{
+    <ui class="list-inline social-source-list">
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="EditSocial" asp-controller="Setting" asp-route-socialId="@Model.Id">
+                    <span class="avatar-title rounded-circle">
+                        <i class="mdi mdi-facebook"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="EditSocial" asp-controller="Setting" asp-route-socialId="@Model.Id">
+                    <span class="avatar-title rounded-circle bg-info">
+                        <i class="mdi mdi-twitter"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="EditSocial" asp-controller="Setting" asp-route-socialId="@Model.Id">
+                    <span class="avatar-title rounded-circle bg-danger">
+                        <i class="mdi mdi-youtube"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="EditSocial" asp-controller="Setting" asp-route-socialId="@Model.Id">
+                    <span class="avatar-title rounded-circle bg-pink">
+                        <i class="mdi mdi-instagram"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+    </ui>
+}
+
+else
+{
+    <ui class="list-inline social-source-list">
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="AddSocial" asp-controller="Setting">
+                    <span class="avatar-title rounded-circle">
+                        <i class="mdi mdi-facebook"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="AddSocial" asp-controller="Setting">
+                    <span class="avatar-title rounded-circle bg-info">
+                        <i class="mdi mdi-twitter"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="AddSocial" asp-controller="Setting">
+                    <span class="avatar-title rounded-circle bg-danger">
+                        <i class="mdi mdi-youtube"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-inline-item">
+            <div class="avatar-xs">
+                <a asp-action="AddSocial" asp-controller="Setting">
+                    <span class="avatar-title rounded-circle bg-pink">
+                        <i class="mdi mdi-instagram"></i>
+                    </span>
+                </a>
+            </div>
+        </li>
+    </ui>
+}

@@ -1,0 +1,17 @@
+﻿@using Shop.Application.Extensions
+@model List<Shop.Domain.Entities.Shop.Site.BlogComment>
+
+@if(Model.Any())
+{
+    @foreach (var item in Model)
+    {
+        <div class="single-blog-comment">
+            <div class="blog-comment-content">
+                <div class="blog-comment-top">
+                    <span>@item.CreateDate.ToDateTimeString()</span>
+                </div>
+                <p>@item.Content</p>
+            </div>
+        </div>
+    }
+}

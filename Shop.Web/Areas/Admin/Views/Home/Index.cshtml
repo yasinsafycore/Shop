@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Panel";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- start row -->
+<div class="row">
+    <div class="col-md-12 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="profile-widgets py-3">
+
+                    <div class="text-center">
+
+                        @await Component.InvokeAsync("AdminSideBar")
+
+                    </div>
+
+                    <div class="text-center">
+                        <div class="mt-4">
+
+                            @await Component.InvokeAsync("Social")
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Component.InvokeAsync("LastCall")
+
+
+        <div class="card">
+            <div class="card-body">
+                <div class="media">
+                    <div class="avatar-sm font-size-20 mr-3">
+                        <span class="avatar-title bg-soft-primary text-primary rounded">
+                            <i class="mdi mdi-account-multiple-outline"></i>
+                        </span>
+                    </div>
+                    <div class="media-body">
+                        <div class="font-size-16 mt-2">Users</div>
+                    </div>
+                </div>
+                <br />
+                @await Component.InvokeAsync("UserCount")
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-xl-9">
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Last Orders</h4>
+
+                @await Component.InvokeAsync("LastOrders")
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Last Products</h4>
+
+                @await Component.InvokeAsync("LastProducts")
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

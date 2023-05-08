@@ -1,0 +1,128 @@
+﻿@using Shop.Domain.ViewModels.Shop.Site
+@model Shop.Domain.Entities.Admin.Products.Product
+
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+    {
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #737373;
+            border-radius: 10px;
+        }
+
+            .button1:hover {
+                background-color: #737373;
+                color: white;
+            }
+    </style>
+}
+
+<hr />
+<div class="product-details-area pt-90 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product-details-img-left">
+                    <img width="600" height="667" src="/content/gallery/@Model.Img" alt="product-details-img">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="product-details-content pro-details-content-modify">
+                    @if (!Model.Categories.IsDelete)
+                    {
+                        <span>@Model.Categories.Title</span>
+                    }
+                    <h2>@Model.Title</h2>
+
+                    <hr />
+
+                    <p>@Model.SubTitle</p>
+
+                    <br />
+
+                    <div class="text-center">
+                        <div class="text-center">
+                            <div class="product-price text-center">
+                                <h2>$@Model.ProductPrice</h2>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="pro-details-buy-now btn-hover btn-hover-radious">
+                            <a asp-action="BuyProduct" asp-controller="Shop" asp-route-productId="@Model.Id">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="description-review-wrapper pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="ml-auto mr-auto col-lg-10">
+                <div class="dec-review-topbar nav mb-40">
+                    <a data-toggle="tab" class="active" href="#des-details1">Description</a>
+                    <a data-toggle="tab" href="#des-details2">Add Comment</a>
+                    <a data-toggle="tab" href="#des-details3">Comments</a>
+                </div>
+                <div class="tab-content dec-review-bottom">
+                    <div id="des-details1" class="tab-pane active">
+                        <div class="description-wrap">
+                            @Html.Raw(Model.Description)
+                        </div>
+                    </div>
+                    <div id="des-details2" class="tab-pane">
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <partial name="_Comment" model="new CommentViewModel {ProductId = Model.Id}" />
+                        }
+                        else
+                        {
+                            <div class="alert alert-info" role="alert">
+                                To add a comment, first log in to your account.
+                            </div>
+                        }
+
+                    </div>
+                    <div id="des-details3" class="tab-pane">
+
+                        @await Component.InvokeAsync("ShowComment", new {ProductId = Model.Id})
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-area pb-85">
+    <div class="container">
+        <div class="section-title-6 mb-50 text-center">
+            <h2>Products Randomly</h2>
+        </div>
+        <div class="product-slider-active owl-carousel">
+
+            @await Component.InvokeAsync("RelatedProduct")
+
+        </div>
+    </div>
+</div>

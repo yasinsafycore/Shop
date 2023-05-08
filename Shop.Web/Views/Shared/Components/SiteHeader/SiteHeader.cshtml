@@ -1,0 +1,32 @@
+﻿@model List<Shop.Domain.Entities.Shop.Orders.Order>
+
+@if (Model.Any())
+{
+    <div class="row">
+
+        <div class="cart-wrap cart-wrap-3 cart-wrap-3-white cart-wrap-hm9">
+
+            <button class="cart-active">
+                <i class="la la-shopping-cart"></i>
+            </button>
+
+            <div class="shopping-cart-content">
+                <div class="shopping-cart-top">
+                    <h4>Your Cart</h4>
+                    <a class="cart-close" href="#"><i class="la la-close"></i></a>
+                </div>
+                <div class="shopping-cart-bottom">
+                    @foreach (var item in Model.Take(1))
+                    {
+                        <div class="shopping-cart-btn btn-hover default-btn text-center">
+                            <a class="black-color" asp-controller="Shop" asp-action="UserBasket" asp-route-orderId="@item.Id">Go To Cart</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+}
+

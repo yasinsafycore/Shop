@@ -1,0 +1,77 @@
+﻿@model Shop.Domain.ViewModels.Shop.Account.AddressViewModel
+
+@{
+    ViewData["Title"] = "Address";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tab-pane fade active show" id="account-info" role="tabpanel">
+    <div class="myaccount-content">
+        <h3>Address</h3>
+        <div class="account-details-form">
+            <form asp-action="Address" asp-controller="Shop" method="post">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="first-name" class="required">First Name</label>
+                            <input type="text" asp-for="FirstName">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="last-name" class="required">Last Name</label>
+                            <input type="text" asp-for="LastName">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="first-name" class="required">Country</label>
+                            <input type="text" asp-for="Country">
+                            <span asp-validation-for="Country" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="last-name" class="required">City</label>
+                            <input type="text" asp-for="City">
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="first-name" class="required">Street Address</label>
+                            <input type="text" asp-for="StreetAddress">
+                            <span asp-validation-for="StreetAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="last-name" class="required">ZipCode</label>
+                            <input type="text" asp-for="Postcode">
+                            <span asp-validation-for="Postcode" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label for="first-name" class="required">Phone</label>
+                            <input type="text" asp-for="Phone">
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-input-item">
+                            <label for="last-name" class="required">OrderNotes</label>
+                            <textarea type="text" rows="5" asp-for="OrderNotes"></textarea>
+                            <span asp-validation-for="OrderNotes" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-input-item">
+                    <button class="check-btn sqr-btn ">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

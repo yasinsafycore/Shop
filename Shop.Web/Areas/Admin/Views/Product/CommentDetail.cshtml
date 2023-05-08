@@ -1,0 +1,24 @@
+﻿@model Shop.Domain.Entities.Shop.Site.Comment
+
+@{
+    ViewData["Title"] = "Comment Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <h6 class="col-8">Comment : </h6><div class="col-10">@Model.Content</div>
+                </div>
+
+                <hr />
+
+                <a href="/Admin/Product/ListComments" class="btn btn-primary submit-fn mt-2" type="submit">Back To List</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div>

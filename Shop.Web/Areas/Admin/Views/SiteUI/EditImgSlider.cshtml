@@ -1,0 +1,39 @@
+﻿@model Shop.Domain.ViewModels.Admin.SiteUI.EditImgSliderViewModel
+
+@{
+    ViewData["Title"] = "Change Image";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8 col-xl-6 mx-auto">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <form asp-action="EditImgSlider" asp-controller="SiteUI" enctype="multipart/form-data" class="mx-auto text-center">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group mb-4 mt-3">
+                                    <label>IMG input</label>
+                                    <div class="custom-file">
+                                        <input id="customFile" asp-for="Img" type="file" class="custom-file-input" style="padding: 0;">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                    <span asp-validation-for="Img" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg waves-effect waves-light">Save</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

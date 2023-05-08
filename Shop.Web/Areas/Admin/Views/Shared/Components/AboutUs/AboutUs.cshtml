@@ -1,0 +1,11 @@
+﻿@model Shop.Domain.Entities.Admin.About.AboutUs
+
+@if (Model == null)
+{
+    <a asp-action="AboutUs" asp-controller="Site" class="dropdown-item">Add About</a>
+}
+else
+{
+    <a asp-action="EditAboutUs" asp-controller="Site" asp-route-aboutId="@Model.Id" class="dropdown-item">Edit About</a>
+    <a asp-action="EditImgAboutUs" asp-controller="Site" asp-route-aboutId="@Model.Id" class="dropdown-item">Change Image</a>
+}

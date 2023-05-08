@@ -1,0 +1,70 @@
+﻿@using Shop.Application.Extensions;
+@model List<Shop.Domain.Entities.Admin.Blog.WeBloge>
+
+@{
+    ViewData["Title"] = "Blog Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var g = (int)ViewBag.PageID + 1;
+    var j = (int)ViewBag.PageID - 1;
+}
+
+<hr />
+<div class="blog-area pt-90 pb-90">
+    <div class="container">
+        <div class="row grid" style="position: relative; height: 3916.94px;">
+            <div class="grid-sizer"></div>
+
+            @if (Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-lg-6 col-md-6 col-sm-6 grid-item" style="position: absolute; left: 0%; top: 0px;">
+                        <div class="blog-wrap mb-45">
+                            <div class="blog-img mb-25">
+                                <a asp-action="BlogDetail" asp-controller="WeBlog" asp-route-blogId="@item.Id"><img src="/content/gallery/@item.Img" alt="blog"></a>
+                            </div>
+                            <div class="blog-content-2">
+                                <h3><a asp-action="BlogDetail" asp-controller="WeBlog" asp-route-blogId="@item.Id">@item.Title</a></h3>
+                                <p>@item.ShortDescription</p>
+                                <div class="blog-meta">
+                                    <div class="blog-author">
+                                        <a asp-action="BlogDetail" asp-controller="WeBlog" asp-route-blogId="@item.Id">@item.CreateDate.ToDateTimeString()</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            }
+
+            else
+            {
+
+            }
+
+        </div>
+
+        <div class="pagination-style text-center">
+            <ul>
+                @if (ViewBag.PageID >= ViewBag.PageCount && ViewBag.PageID != 1)
+                {
+                    <li><a class="prev" asp-action="BlogList" asp-controller="WeBlog" asp-route-blogId="@j"><i class="la la-angle-left"></i></a></li>
+                }
+                <li>
+                    @for (int i = 1; i <= (ViewBag.PageCount + 1); i++)
+                    {
+                        <a class="@(((int)ViewBag.PageID==i)?"active":"")" asp-action="BlogList" asp-controller="WeBlog" asp-route-blogId="@i">@i</a>
+                    }
+                </li>
+                @if (ViewBag.PageID <= ViewBag.PageCount)
+                {
+                    <li><a class="next" asp-action="BlogList" asp-controller="WeBlog" asp-route-blogId="@g"><i class="la la-angle-right"></i></a></li>
+                }
+
+            </ul>
+        </div>
+
+
+    </div>
+</div>

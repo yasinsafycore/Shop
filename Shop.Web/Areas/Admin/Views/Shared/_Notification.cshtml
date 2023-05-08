@@ -1,0 +1,47 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        swal({
+            title: "Message",
+            text: "@TempData["SuccessMessage"]",
+            icon: "success",
+            button: "OK"
+        });
+    </script>
+}
+
+@if (TempData["WarningMessage"] != null)
+{
+    <script>
+        swal({
+            title: "Message",
+            text: "@TempData["WarningMessage"]",
+            icon: "warning",
+            button: "OK"
+        });
+    </script>
+}
+
+@if (TempData["InfoMessage"] != null)
+{
+    <script>
+        swal({
+            title: "Message",
+            text: "@TempData["InfoMessage"]",
+            icon: "info",
+            button: "OK"
+        });
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        swal({
+            title: "Message",
+            text: "@TempData["ErrorMessage"]",
+            icon: "error",
+            button: "OK"
+        });
+    </script>
+}

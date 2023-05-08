@@ -1,0 +1,92 @@
+﻿@using Shop.Application.Extensions
+@model Shop.Domain.Entities.Shop.Orders.Order
+
+@{
+    ViewData["Title"] = "Order Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles
+    {
+    <style>
+        .Aclass {
+            white-space: nowrap;
+            width: 350px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+}
+
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Order Summary</h4>
+
+                <br>
+
+                <div class="table-responsive">
+                    <table class="table mb-0">
+
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Count</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var item in Model.OrderDetails)
+                            {
+                                @if (!item.IsDelete)
+                                {
+                                    <tr>
+                                        <td>
+                                            <a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Product.Id">
+                                                <img alt="avatar" class=" rounded-circle" width="60" height="60" src="/content/gallery/@item.Product.Img">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <p class="Aclass">
+                                                @item.Product.Title
+                                            </p>
+                                        </td>
+                                        <td>@item.CreateDate.ToDateTimeString()</td>
+                                        <td>@item.Count</td>
+                                        <td>$@(item.Price * item.Count)</td>
+                                    </tr>
+                                }
+                            }
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                @if (!Model.Posted)
+                {
+                    <div class="d-print-none">
+                        <div class="float-right">
+                            <a href="/Admin/Product/ListPendingOrders" class="btn btn-primary w-md waves-effect waves-light">Back To List</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="d-print-none">
+                        <div class="float-right">
+                            <a href="/Admin/Product/ListPostedOrders" class="btn btn-primary w-md waves-effect waves-light">Back To List</a>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>

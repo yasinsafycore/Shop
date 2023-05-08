@@ -1,0 +1,34 @@
+﻿@model List<Shop.Domain.Entities.Admin.Products.Product>
+
+
+@if (Model.Any())
+{
+    <div class="section-title-6 mb-50 text-center">
+        <h2>Latest Products</h2>
+    </div>
+    <div class="product-slider-active-3 owl-carousel">
+        @foreach (var item in Model)
+        {
+            <div class="product-wrap">
+                <div class="product-img mb-15">
+                    <a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Id"><img width="330" height="330" src="/content/gallery/@item.Img" alt="product"></a>
+                </div>
+                <div class="product-content">
+                    @if (!item.Categories.IsDelete)
+                    {
+                        <span>@item.Categories.Title</span>
+                    }
+                    <h4><a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Id">@item.Title</a></h4>
+                    <div class="price-addtocart">
+                        <div class="product-price">
+                            <span>$@item.ProductPrice</span>
+                        </div>
+                        <div class="product-addtocart">
+                            <a title="Add To Cart" asp-action="BuyProduct" asp-controller="Shop" asp-route-productId="@item.Id">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,84 @@
+﻿@model Shop.Domain.ViewModels.Admin.about.EditAboutUsViewModel
+
+@{
+    ViewData["Title"] = "Edit AboutUs";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+
+        <div class="card">
+            <div class="card-body">
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div class="tab-pane" id="revenue" role="tabpanel" style="position: relative;">
+                        <div id="revenue-chart" class="apex-charts mt-4" style="min-height: 315px;"><div id="apexcharts0zaiaxdw" class="apexcharts-canvas apexcharts0zaiaxdw" style="width: 0px; height: 300px;"><svg id="SvgjsSvg1026" width="0" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG1029" class="apexcharts-annotations"></g><g id="SvgjsG1028" class="apexcharts-inner apexcharts-graphical"><defs id="SvgjsDefs1027"></defs></g></svg><div class="apexcharts-legend"></div></div></div>
+                        <div class="resize-triggers"><div class="expand-trigger"><div style="width: 1px; height: 1px;"></div></div><div class="contract-trigger"></div></div>
+                    </div>
+                    <form asp-action="EditAboutUs" asp-controller="Site" enctype="multipart/form-data" method="post">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control" asp-for="Title">
+                                    <span asp-validation-for="Title" class="text-danger m-1"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Sub Title</label>
+                                    <textarea type="text" class="form-control" rows="3" asp-for="SubTitle"></textarea>
+                                    <span asp-validation-for="SubTitle" class="text-danger m-1"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger m-1"></span>
+                                </div>
+                            </div> <!-- end col -->
+                        </div>
+
+                        <div class="row mt-4">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Button Title</label>
+                                    <input asp-for="ButtonTitle" class="form-control">
+                                    <span asp-validation-for="ButtonTitle" class="text-danger"></span>
+                                </div>
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Button Link</label>
+                                    <input type="url" class="form-control" asp-for="ButtonLink">
+                                    <span asp-validation-for="ButtonLink" class="text-danger"></span>
+                                </div>
+                            </div> <!-- end col -->
+
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg waves-effect waves-light">Save</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

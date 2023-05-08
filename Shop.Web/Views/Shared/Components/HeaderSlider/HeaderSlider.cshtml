@@ -1,0 +1,29 @@
+﻿@model List<Shop.Domain.Entities.Admin.SiteUI.HeaderSlider>
+
+@if (Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="bg-img slider-height-10 res-white-overly-xs" style="background-image:url(/content/gallery/@item.Img);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="ml-auto col-xl-5 col-lg-6 col-md-10 col-12 col-sm-12">
+                        <div class="slider-content-10 slider-animated-1 slider-content-border2">
+                            <h5 class="animated">@item.SmallDescription</h5>
+                            <h1 class="animated">@item.Title</h1>
+                            <div class="slider-btn-10 btn-hover">
+                                <a class="animated" href="@item.ButtonLink">@item.ButtonTitle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+}
+
+else
+{
+
+}

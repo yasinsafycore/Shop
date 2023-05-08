@@ -1,0 +1,91 @@
+﻿@using Shop.Domain.Entities.Shop.Orders;
+@model Shop.Domain.Entities.Shop.Account.Address
+
+@{
+    ViewData["Title"] = "Address";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var order = ViewData["Order"] as Order;
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">First Name</label>
+                    <div class="col-md-10">
+                        <div>@Model.FirstName</div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">Last Name</label>
+                    <div class="col-md-10">
+                        <div>@Model.LastName</div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">Phone</label>
+                    <div class="col-md-10">
+                        <div>@Model.Phone</div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">ZipCode</label>
+                    <div class="col-md-10">
+                        <div>@Model.Postcode</div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">City</label>
+                    <div class="col-md-10">
+                        <div>@Model.City</div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">Country</label>
+                    <div class="col-md-10">
+                        <div>@Model.Country</div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">Street Address</label>
+                    <div class="col-md-10">
+                        <div>@Model.StreetAddress</div>
+                    </div>
+                </div>
+
+                @if (Model.OrderNotes != null)
+                {
+                    <hr />
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-md-2 col-form-label">Order Notes</label>
+                        <div class="col-md-10">
+                            <div>@Model.OrderNotes</div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div>

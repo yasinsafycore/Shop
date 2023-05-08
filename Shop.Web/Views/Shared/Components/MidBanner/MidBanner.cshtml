@@ -1,0 +1,25 @@
+﻿@model Shop.Domain.Entities.Admin.SiteUI.MiddleBanner
+
+@if (Model != null)
+{
+    <div class="bg-img deal-bg" style="background-image:url(/content/gallery/@Model.Img);">
+        <div class="container">
+            <div class="row">
+                <div class="ml-auto col-lg-7 col-md-10 col-sm-10 col-12">
+                    <div class="deal-content-4">
+                        <h2>@Model.Title</h2>
+                        <p>@Model.SmallDescription</p>
+                        <div class="deal-btn4 btn-hover btn-hover-radious">
+                            <a href="@Model.ButtonLink">@Model.ButtonTitle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+else
+{
+
+}

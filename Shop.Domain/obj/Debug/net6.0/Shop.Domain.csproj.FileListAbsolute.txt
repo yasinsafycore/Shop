@@ -1,0 +1,84 @@
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+E:\Shop\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+E:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+E:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.runtimeconfig.json
+E:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+E:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+E:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.genruntimeconfig.cache
+E:\Shop\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+F:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+F:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.runtimeconfig.json
+F:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+F:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+F:\Shop\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+F:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.genruntimeconfig.cache
+F:\Shop\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+A:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+A:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.runtimeconfig.json
+A:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+A:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+A:\Shop\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+A:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.genruntimeconfig.cache
+A:\Shop\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+A:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+A:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.runtimeconfig.json
+A:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+A:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.genruntimeconfig.cache
+A:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+F:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+F:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.runtimeconfig.json
+F:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+F:\ASP.NET CORE\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.genruntimeconfig.cache
+F:\ASP.NET CORE\Shop\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+D:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+D:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.runtimeconfig.json
+D:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+D:\Shop\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+D:\Shop\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+D:\Shop\Shop.Domain\obj\Debug\net6.0\Shop.Domain.genruntimeconfig.cache
+D:\Shop\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll

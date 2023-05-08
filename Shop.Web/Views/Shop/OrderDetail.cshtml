@@ -1,0 +1,93 @@
+﻿@using Shop.Application.Extensions
+@model Shop.Domain.Entities.Shop.Orders.Order
+
+@{
+    ViewData["Title"] = "Order Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div class="cart-main-area pt-85 pb-90">
+    <div class="container">
+        @if (Model.OrderDetails != null && Model.OrderDetails.Any())
+        {
+            <h3 class="cart-page-title">Your cart items</h3>
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="table-content table-responsive cart-table-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Count</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.OrderDetails)
+                                {
+                                    @if (!item.IsDelete)
+                                    {
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Product.Id"><img width="82" height="82" src="/content/gallery/@item.Product.Img" alt=""></a>
+                                            </td>
+                                            <td class="product-name"><a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Product.Id">@item.Product.Title</a></td>
+                                            <td class="product-price-cart">
+                                                <span class="amount">
+                                                    $@(
+                                                       item.Price * item.Count
+                                                       )
+                                                </span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                @item.Count
+                                            </td>
+                                            <td class="product-quantity">@item.CreateDate.ToDateTimeString()</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+
+        else
+        {
+            <div class="customer-zone mb-20">
+                <p class="cart-page-title">There is no product in your shopping cart! <a asp-action="ProductList" asp-controller="Shop">Click here to buy</a></p>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+
+@if (Model.Posted)
+{
+    <div class="container text-center">
+        <div class="alert alert-success" role="alert">
+            <p>The products have been sent to your Address in the Panel. <a href="/Shop/ListOrders/">Back to list</a></p>
+        </div>
+    </div>
+}
+else
+{
+
+    <div class="container text-center">
+        <div class="alert alert-danger" role="alert">
+            <p>Unfortunately, the products have not been sent. <a href="/Shop/ListOrders/">Back to list</a></p>
+        </div>
+    </div>
+    
+}
+
+
+<br />
+<br />

@@ -1,0 +1,23 @@
+﻿@model List<Shop.Domain.Entities.Admin.Blog.WeBloge>
+
+@if (Model.Any())
+{
+    <div class="section-title-6 mb-50 text-center">
+        <h2>Blogs Updates</h2>
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="blog-wrap mb-30">
+                    <div class="blog-img mb-20">
+                        <a asp-action="BlogDetail" asp-controller="WeBlog" asp-route-blogId="@item.Id"><img width="370" height="270" src="/content/gallery/@item.Img" alt="blog"></a>
+                    </div>
+                    <div class="blog-content blog-border">
+                        <h3><a asp-action="BlogDetail" asp-controller="WeBlog" asp-route-blogId="@item.Id">@item.Title</a></h3>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,16 @@
+﻿@using Shop.Domain.Entities.Shop.Orders
+
+@{
+    ViewData["Title"] = "Delete Order Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var order = (Order)ViewBag.Order;
+}
+
+<hr />
+<div class="cart-main-area pt-85 pb-90">
+    <div class="container">
+            <div class="customer-zone mb-20">
+            <p class="cart-page-title">The product was deleted from your shopping cart. <a asp-controller="Shop" asp-action="UserBasket" asp-route-orderId="@order.Id">Return to cart</a></p>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@using Shop.Application.Extensions
+@model List<Shop.Domain.Entities.Shop.Orders.Order>
+
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-centered mb-0">
+            <thead>
+                <tr>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Cart total</th>
+                    <th scope="col" colspan="2">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@item.User.GetUserName()</td>
+                        <td>
+                            @item.CreateDate.ToDateTimeString()
+                        </td>
+                        <td>$@item.OrderSum</td>
+
+                        @if (item.Posted)
+                        {
+                            <td><span class="badge badge-soft-success font-size-12">Posted</span></td>
+                            <td><a asp-action="OrderDetail" asp-controller="Product" asp-route-orderId="@item.Id" class="btn btn-primary btn-sm">Products</a></td>
+                        }
+
+                        else
+                        {
+                            <td><span class="badge badge-soft-danger font-size-12">Pending</span></td>
+                            <td><a asp-action="PostedOrder" asp-controller="Product" asp-route-orderId="@item.Id" class="btn btn-primary btn-sm">Send</a></td>
+                        }
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+else
+{
+    <div class="text-center">
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="alert-heading">NO Data!</h4>
+            <p>Unfortunately, no information is available yet, if other information is available this alert will not be displayed.</p>
+        </div>
+    </div>
+}

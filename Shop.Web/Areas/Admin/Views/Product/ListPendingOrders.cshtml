@@ -1,0 +1,144 @@
+﻿@using Shop.Application.Extensions
+@model List<Shop.Domain.Entities.Shop.Orders.Order>
+
+@{
+    ViewData["Title"] = "Pending Orders";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles
+    {
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+            .pagination a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                border: 1px solid #ddd;
+            }
+
+                .pagination a.active {
+                    background-color: #2a3042;
+                    color: white;
+                    border: 1px solid #2a3042;
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+
+                .pagination a:first-child {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+
+                .pagination a:last-child {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+    </style>
+}
+
+@if (Model.Any())
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Data list</h4>
+
+                    <br />
+
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Cart total</th>
+                                    <th>Date</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.User.GetUserName()</td>
+                                        <td>$@item.OrderSum</td>
+                                        <td>@item.CreateDate.ToDateTimeString()</td>
+
+                                        @if (!item.Posted)
+                                        {
+                                            <td class="text-center"><span class="badge badge-danger">Pending</span></td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-center"><span class="badge badge-success">Posted</span></td>
+                                        }
+
+                                        <td class="text-center">
+
+                                            <div class="dropdown custom-dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </a>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1" style="will-change: transform;">
+
+                                                    <a class="dropdown-item" asp-action="ShowAddress" asp-controller="Product" asp-route-userId="@item.User.Id">Address</a>
+                                                    <a class="dropdown-item" asp-action="OrderDetail" asp-controller="Product" asp-route-orderId="@item.Id">Products</a>
+
+                                                    @if (item.Posted)
+                                                    {
+                                                        <a class="dropdown-item" asp-action="PendingOrder" asp-controller="Product" asp-route-orderId="@item.Id">Cancel Send</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a class="dropdown-item" asp-action="PostedOrder" asp-controller="Product" asp-route-orderId="@item.Id">Send</a>
+                                                    }
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        @for (int i = 1; i <= (ViewBag.PageCount + 1); i++)
+        {
+            <a class="@(((int)ViewBag.PageID==i)?"active":"")" asp-action="ListPendingOrders" asp-controller="Product" asp-route-orderId="@i">@i</a>
+        }
+        <a href="#">&raquo;</a>
+    </div>
+}
+
+else
+{
+    <div class="text-center">
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="alert-heading">NO Data!</h4>
+            <p>Unfortunately, no information is available yet, if other information is available this alert will not be displayed.</p>
+        </div>
+    </div>
+}

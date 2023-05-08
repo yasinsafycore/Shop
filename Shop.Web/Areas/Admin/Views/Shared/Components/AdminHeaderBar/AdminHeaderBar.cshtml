@@ -1,0 +1,22 @@
+﻿@model Shop.Domain.Entities.Admin.Dashboard.AdminProfile
+
+
+@if (Model == null)
+{
+    <button type="button" asp-action="AddProfile" asp-controller="Home" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="rounded-circle header-profile-user" src="/assets/images/users/avatar-2.jpg" alt="Header Avatar">
+        <span class="d-none d-xl-inline-block ml-1">Add Profile</span>
+        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+    </button>
+}
+
+else
+{
+        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="rounded-circle header-profile-user" src="/content/gallery/@Model.Img" alt="Header Avatar">
+            <span class="d-none d-xl-inline-block ml-1">@($"{Model.FirstName} {Model.LastName}")</span>
+            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+        </button>
+    
+    
+}

@@ -1,0 +1,87 @@
+﻿@using Shop.Application.Extensions
+@model List<Shop.Domain.Entities.Admin.SiteUI.HeaderBanner>
+@{
+    ViewData["Title"] = "List Banners";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Any())
+{
+    <div class="row">
+        <div class="col-md-12 col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Data list</h4>
+
+                    <br />
+
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Date</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Title</td>
+                                        <td>@item.CreateDate.ToDateTimeString()</td>
+
+                                        @if (item.IsDelete)
+                                        {
+                                            <td class="text-center"><span class="badge badge-danger">Deleted</span></td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-center"><span class="badge badge-success">Active</span></td>
+                                        }
+
+                                        <td class="text-center">
+
+                                            <div class="dropdown custom-dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </a>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1" style="will-change: transform;">
+
+                                                    <a class="dropdown-item" asp-action="EditHeaderBanner" asp-controller="SiteUI" asp-route-bannerId="@item.Id">Edit</a>
+                                                    <a class="dropdown-item" asp-action="EditImgBanner" asp-controller="SiteUI" asp-route-bannerId="@item.Id">Change Image</a>
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+}
+
+else
+{
+    <div class="text-center">
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="alert-heading">NO Data!</h4>
+            <p>Unfortunately, no information is available yet, if other information is available this alert will not be displayed.</p>
+        </div>
+    </div>
+}

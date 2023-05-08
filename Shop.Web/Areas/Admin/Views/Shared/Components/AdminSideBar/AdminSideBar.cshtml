@@ -1,0 +1,30 @@
+﻿@model Shop.Domain.Entities.Admin.Dashboard.AdminProfile
+
+
+@if (Model == null)
+{
+        <div class="">
+            <img src="/assets/images/users/avatar-2.jpg" alt="" class="avatar-lg mx-auto img-thumbnail rounded-circle">
+            <div class="online-circle"><i class="fas fa-circle text-success"></i></div>
+        </div>
+
+        <div class="mt-3 ">
+            <a asp-action="AddProfile" asp-controller="Home" class="text-dark font-weight-medium font-size-16">Add Profile</a>
+            <p class="text-body mt-1 mb-1">Admin</p>
+        </div>
+}
+
+else
+{
+            <div class="">
+                <a asp-action="EditImgProfile" asp-controller="Home" asp-route-profileId="@Model.Id">
+                    <img src="/content/gallery/@Model.Img" alt="" class="avatar-lg mx-auto img-thumbnail rounded-circle">
+                    <div class="online-circle"><i class="fas fa-circle text-success"></i></div>
+                </a>
+            </div>
+
+            <div class="mt-3 ">
+                <a asp-action="EditProfile" asp-controller="Home" asp-route-profileId="@Model.Id" class="text-dark font-weight-medium font-size-16">@($"{Model.FirstName} {Model.LastName}")</a>
+                <p class="text-body mt-1 mb-1">Admin</p>
+                </div>
+}

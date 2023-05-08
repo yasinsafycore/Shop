@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Posted Order";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted d-flex align-items-center justify-content-center">
+                    <!-- استفاده از کلاس های d-flex و align-items-center و justify-content-center برای مرکز چین کردن تگ ها -->
+                    <form asp-action="PostedOrder" asp-controller="Product">
+                        <div class="media-body text-center">
+                            <!-- استفاده از کلاس text-center برای مرکز چین کردن متن -->
+                            <h4 class="media-heading">Are you sure you want to send this purchase?</h4>
+                        </div>
+                        <hr />
+                        <div class="text-center">
+                            <button class="btn btn-primary submit-fn mt-2" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

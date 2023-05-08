@@ -1,0 +1,70 @@
+﻿@using Shop.Application.Extensions
+@model List<Shop.Domain.Entities.Admin.Products.Product>
+
+@{
+    <style>
+        .AClass {
+            white-space: nowrap;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+}
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-centered mb-0">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <p class="AClass">@item.Title</p>
+                        </td>
+                        <td>
+                            @item.CreateDate.ToDateTimeString()
+                        </td>
+                        <td>$@item.ProductPrice</td>
+
+                        @if (item.IsDelete)
+                        {
+                            <td><span class="badge badge-soft-danger font-size-12">Deleted</span></td>
+                        }
+
+                        else
+                        {
+                            <td><span class="badge badge-soft-success font-size-12">Active</span></td>
+                        }
+
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-3">
+        <ul class="pagination pagination-rounded justify-content-center mb-0">
+            <li class="page-item"><a class="page-link" href="/Admin/Product/ListProducts">More Details</a></li>
+        </ul>
+    </div>
+}
+
+else
+{
+    <div class="text-center">
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="alert-heading">NO Data!</h4>
+            <p>Unfortunately, no information is available yet, if other information is available this alert will not be displayed.</p>
+        </div>
+    </div>
+}

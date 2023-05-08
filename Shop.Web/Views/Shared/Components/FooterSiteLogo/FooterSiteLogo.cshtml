@@ -1,0 +1,9 @@
+﻿@model Shop.Domain.Entities.Admin.Setting.General.SiteLogo
+
+@if (Model != null)
+{
+    <a href="/"><img height="34" width="155" src="/content/gallery/@Model.Img" alt="logo"></a>
+    <div class="footer-about">
+        <p>@Model.SiteDescription </p>
+    </div>
+}

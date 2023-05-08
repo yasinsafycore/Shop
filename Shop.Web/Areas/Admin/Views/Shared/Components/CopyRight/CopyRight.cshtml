@@ -1,0 +1,14 @@
+﻿@model Shop.Domain.Entities.Admin.Setting.General.CopyRight
+
+@if (Model == null)
+{
+    <div class="dropdown-menu" aria-labelledby="topnav-form">
+        <a asp-action="CopyRight" asp-controller="Setting" class="dropdown-item">Add Text</a>
+    </div>
+}
+else
+{
+    <div class="dropdown-menu" aria-labelledby="topnav-form">
+        <a asp-action="EditCopyRight" asp-controller="Setting" asp-route-Id="@Model.Id" class="dropdown-item">Edit Text</a>
+    </div>
+}

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Pending Order";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted d-flex align-items-center justify-content-center">
+                    <form asp-action="PendingOrder" asp-controller="Product">
+                        <div class="media-body text-center">
+                            <h4 class="media-heading">Are you sure you want to cancel this purchase?</h4>
+                        </div>
+                        <hr />
+                        <div class="text-center">
+                            <button class="btn btn-primary submit-fn mt-2" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

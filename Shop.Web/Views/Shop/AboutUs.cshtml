@@ -1,0 +1,80 @@
+﻿@using Shop.Domain.Entities.Admin.About;
+@model Shop.Domain.Entities.Admin.About.AboutUs
+
+@{
+    ViewData["Title"] = "About Us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var team = ViewData["Team"] as List<Team>;
+}
+
+<hr />
+<div class="about-us-area pt-90 pb-90">
+    <div class="container">
+        @if (Model != null)
+        {
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="about-us-img text-center">
+                        <a href="/">
+                            <img src="/content/gallery/@Model.Img" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 align-self-center">
+                    <div class="about-us-content">
+                        <h2>@Model.Title</h2>
+                        <p class="peragraph-blog">@Model.SubTitle</p>
+                        <p>@Model.Description</p>
+                        <div class="about-us-btn btn-hover hover-border-none">
+                            <a class="btn-color-white btn-color-theme-bg black-color" href="@Model.ButtonLink">@Model.ButtonTitle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="text-center">
+                <div class="alert alert-secondary" role="alert">
+                    <h4 class="alert-heading">NO Data!</h4>
+                    <p>Unfortunately, no information is available yet, if other information is available this alert will not be displayed.</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@if (team.Any())
+{
+    <div class="team-area pt-60 pb-60">
+        <div class="container">
+            <div class="section-title-2 text-center">
+                <h2>Team Members</h2>
+            </div>
+            <div class="row">
+                @foreach (var item in team)
+                {
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team-wrapper mb-30">
+                            <div class="team-img">
+                                <a href="#">
+                                    <img width="277" height="300" src="/content/gallery/@item.Img" alt="">
+                                </a>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>
+                                    @(
+                                        $"{item.FirstName} {item.LastName}"
+                                        )
+                                </h4>
+                                <span>@item.Job </span>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+}

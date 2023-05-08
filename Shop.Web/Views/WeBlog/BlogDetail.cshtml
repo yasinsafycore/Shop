@@ -1,0 +1,49 @@
+﻿@using Shop.Domain.ViewModels.Shop.Site
+@model Shop.Domain.Entities.Admin.Blog.WeBloge
+
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div class="blog-details-area pt-90 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blog-details-wrap">
+                    <div class="blog-details-img mb-40">
+                        <img src="/content/gallery/@Model.Img" alt="blog">
+                    </div>
+                    <div class="row">
+                        @Html.Raw(Model.Content)
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-12 pr-445">
+                            <div class="blog-comment-area">
+                                <h4>Comments</h4>
+                                <div class="blog-comment-wrap">
+
+                                    @await Component.InvokeAsync("ShowBlogComment", new {blogId = Model.Id})
+                                    
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <partial name="_CommentBlog" model="new CommentBlogViewModel {blogId = Model.Id}" />
+                                    }
+                                    else
+                                    {
+                                        <div class="alert alert-info" role="alert">
+                                            To add a comment, first log in to your account.
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

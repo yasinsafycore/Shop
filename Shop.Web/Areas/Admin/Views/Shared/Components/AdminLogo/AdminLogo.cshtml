@@ -1,0 +1,24 @@
+﻿@model Shop.Domain.Entities.Admin.Setting.General.AdminLogo
+
+@if (Model == null)
+{
+    <a asp-action="AdminLogo" asp-controller="Setting" class="logo logo-light">
+        <span class="logo-sm">
+            <img width="92" src="/assets/images/logo-sm-dark.png" alt="" height="20">
+        </span>
+        <span class="logo-lg">
+            <img width="92" src="/assets/images/logo-light.png" alt="" height="18">
+        </span>
+    </a>
+}
+else
+{
+    <a asp-action="EditAdminLogo" asp-controller="Setting" asp-route-logoId="@Model.Id" class="logo logo-light">
+        <span class="logo-sm">
+            <img height="18" width="92" src="/content/gallery/@Model.Img" alt="" height="20">
+        </span>
+        <span class="logo-lg">
+            <img height="18" width="92" src="/content/gallery/@Model.Img" alt="" height="18">
+        </span>
+    </a>
+}

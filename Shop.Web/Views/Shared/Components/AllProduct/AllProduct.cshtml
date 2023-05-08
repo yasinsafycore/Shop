@@ -1,0 +1,55 @@
+﻿@model List<Shop.Domain.Entities.Admin.Products.Product>
+
+@if (Model.Any())
+{
+    <div class="section-title-tab-wrap2">
+        <div class="row">
+            <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4">
+                <div class="section-title-7">
+                    <h2>Products From The Store</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content jump">
+        <div id="product-10" class="tab-pane active">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-wrap mb-35">
+                            <div class="product-img mb-15">
+                                <a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Id"><img width="270" height="270" src="/content/gallery/@item.Img" alt="product"></a>
+                            </div>
+                            <div class="product-content">
+                                @if (!item.Categories.IsDelete)
+                                {
+                                    <span>@item.Categories.Title</span>
+                                }
+                                <h4><a asp-action="ProductDetail" asp-controller="Shop" asp-route-productId="@item.Id">@item.Title</a></h4>
+                                <div class="price-addtocart">
+                                    <div class="product-price">
+                                        <span>$@item.ProductPrice</span>
+                                    </div>
+                                    <div class="product-addtocart">
+                                        <a title="Add To Cart" asp-action="BuyProduct" asp-controller="Shop" asp-route-productId="@item.Id">+ Add To Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+else
+{
+    <div class="text-center">
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="alert-heading">NO Data!</h4>
+            <p>Unfortunately, no information is available yet, if other information is available this alert will not be displayed.</p>
+        </div>
+    </div>
+}

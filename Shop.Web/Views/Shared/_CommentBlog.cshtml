@@ -1,0 +1,17 @@
+﻿@model Shop.Domain.ViewModels.Shop.Site.CommentBlogViewModel
+
+<form asp-action="CommentBlog" asp-controller="WeBlog" method="post">
+
+    <div class="single-blog-comment">
+
+        <div class="blog-comment-reply">
+            <input type="hidden" asp-for="blogId" />
+            <textarea asp-for="Comment" placeholder="Your comment..."></textarea>
+        </div>
+    </div>
+
+    <div class="pro-details-buy-now btn-hover btn-hover-radious">
+        <input type="submit" value="Send" />
+    </div>
+
+</form>

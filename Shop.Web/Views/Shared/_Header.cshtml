@@ -1,0 +1,175 @@
+﻿<header class="header-area sticky-bar header-padding-5">
+    <div class="main-header-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3">
+                    <div class="logo mt-40">
+                        @await Component.InvokeAsync("HeaderSiteLogo")
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-flex justify-content-center">
+                    <div class="main-menu menu-common-style menu-lh-1 menu-margin-4 menu-font-3">
+                        <nav>
+                            <ul>
+                                <li class="angle-shape">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="angle-shape">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a href="javascript:%20void(0);">Panel</a>
+                                        <ul class="submenu">
+                                            <li><a asp-action="EditPanel" asp-controller="Account"> User Panel </a></li>
+                                            @await Component.InvokeAsync("Address")
+                                            <li><a asp-action="ChangePassword" asp-controller="Account"> Change Password </a></li>
+                                            <li><a asp-action="ListOrders" asp-controller="Shop"> Order Status </a></li>
+                                            <li><a asp-action="Logout" asp-controller="Account"> Logout </a></li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <a href="javascript:%20void(0);">Sing in</a>
+                                        <ul class="submenu">
+                                            <li><a asp-action="Register" asp-controller="Account"> Register </a></li>
+                                            <li><a asp-action="Login" asp-controller="Account"> Login </a></li>
+                                        </ul>
+                                    }
+                                </li>
+                                <li><a href="/Shop/ProductList">Store </a></li>
+                                <li class="angle-shape">
+                                    <a href="javascript:%20void(0);">Categories </a>
+                                    @await Component.InvokeAsync("Categories")
+                                </li>
+                                <li><a asp-action="BlogList" asp-controller="WeBlog">Blog</a></li>
+                                <li><a asp-action="ContactUs" asp-controller="Shop">Contact</a></li>
+                                <li><a asp-action="AboutUs" asp-controller="Shop">About Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3">
+                    <div class="header-right-wrap mt-40">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @await Component.InvokeAsync("SiteHeader")
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-small-mobile">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="mobile-logo">
+                        <a href="index.html">
+                            <img alt="" src="/images/logo/logo-1.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="header-right-wrap">
+                        <div class="cart-wrap common-style">
+                            <button class="cart-active">
+                                <i class="la la-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="mobile-off-canvas">
+                            <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="mobile-off-canvas-active">
+    <a class="mobile-aside-close"><i class="la la-close"></i></a>
+    <div class="header-mobile-aside-wrap">
+        <div class="mobile-menu-wrap">
+            <!-- mobile menu start -->
+            <div class="mobile-navigation">
+                <!-- mobile menu navigation start -->
+                <nav>
+                    <ul class="mobile-menu">
+                        <li class="menu-item-has-children">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="menu-item-has-children ">
+                            <a href="#">shop</a>
+                            <ul class="dropdown">
+                                <li class="menu-item-has-children">
+                                    <a href="#">shop layout</a>
+                                    <ul class="dropdown">
+                                        <li><a href="shop.html">standard grid style</a></li>
+                                        <li><a href="shop-2.html">standard style 2</a></li>
+                                        <li><a href="shop-2-col.html">shop 2 column</a></li>
+                                        <li><a href="shop-no-sidebar.html">shop no sidebar</a></li>
+                                        <li><a href="shop-fullwide.html">shop fullwide</a></li>
+                                        <li><a href="shop-fullwide-no-sidebar.html">fullwide no sidebar </a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">shop list layout</a>
+                                    <ul class="dropdown">
+                                        <li><a href="shop-list.html">list style</a></li>
+                                        <li><a href="shop-list-2col.html">list 2 column</a></li>
+                                        <li><a href="shop-list-no-sidebar.html">list no sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">product details</a>
+                                    <ul class="dropdown">
+                                        <li><a href="product-details.html">standard style</a></li>
+                                        <li><a href="product-details-2.html">standard style 2</a></li>
+                                        <li><a href="product-details-tab1.html">tab style 1</a></li>
+                                        <li><a href="product-details-tab2.html">tab style 2</a></li>
+                                        <li><a href="product-details-tab3.html">tab style 3 </a></li>
+                                        <li><a href="product-details-gallery.html">gallery style </a></li>
+                                        <li><a href="product-details-sticky.html">sticky style</a></li>
+                                        <li><a href="product-details-slider.html">slider style</a></li>
+                                        <li><a href="product-details-affiliate.html">Affiliate style</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a href="javascript:%20void(0);">Panel</a>
+                                <ul class="dropdown">
+                                    <li><a asp-action="EditPanel" asp-controller="Account"> User Panel </a></li>
+                                    @await Component.InvokeAsync("Address")
+                                    <li><a asp-action="ChangePassword" asp-controller="Account"> Change Password </a></li>
+                                    <li><a asp-action="ListOrders" asp-controller="Shop"> Order Status </a></li>
+                                    <li><a asp-action="Logout" asp-controller="Account"> Logout </a></li>
+                                </ul>
+                            }
+                            else
+                            {
+                                <a href="javascript:%20void(0);">Sing in</a>
+                                <ul class="dropdown">
+                                    <li><a asp-action="Register" asp-controller="Account"> Register </a></li>
+                                    <li><a asp-action="Login" asp-controller="Account"> Login </a></li>
+                                </ul>
+                            }
+                        </li>
+                        <li class="menu-item-has-children ">
+                            <a href="#">Blog</a>
+                            <ul class="dropdown">
+                                <li><a href="blog.html">standard style </a></li>
+                                <li><a href="blog-2col.html">blog 2 column </a></li>
+                                <li><a href="blog-sidebar.html">blog sidebar </a></li>
+                                <li><a href="blog-details.html">blog details </a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-action="ContactUs" asp-controller="Shop">Contact us</a></li>
+                    </ul>
+                </nav>
+                <!-- mobile menu navigation end -->
+            </div>
+            <!-- mobile menu end -->
+        </div>
+    </div>
+</div>
